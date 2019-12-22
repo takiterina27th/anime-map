@@ -49,7 +49,7 @@ Things you may want to cover:
 |image|string|null: false|
 |anime_title|string|null: false|
 |description|string|null: false|
-|user_id|integer|foreign_key: true|
+|user_id|references|foreign_key: true|
 
 ### Association
 - belongs_to :user
@@ -62,8 +62,8 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |description|string|null: false|
-|user_id|integer|foreign_key: true|
-|post_id|integer|foreign_key: true|
+|user_id|references|foreign_key: true|
+|post_id|references|foreign_key: true|
 
 ### Association
 - belongs_to :user
@@ -74,8 +74,8 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|foreign_key: true|
-|post_id|integer|foreign_key: true|
+|user_id|references|foreign_key: true|
+|post_id|references|foreign_key: true|
 
 ### Association
 - belongs_to :user
