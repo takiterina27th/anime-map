@@ -22,3 +22,20 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+# DB設計
+
+## usersテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|nickname|string|null: false|
+|avatar|string||
+|email|string|null: false|
+|password|string|null: false|
+
+### アソシエーション
+
+- has_many :posts
+- has_many :comments
+- has_many :favorites
