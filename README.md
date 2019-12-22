@@ -68,3 +68,15 @@ Things you may want to cover:
 ### Association
 - belongs_to :user
 - belongs_to :post
+
+
+## favoritesテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|foreign_key: true|
+|post_id|integer|foreign_key: true|
+
+### Association
+- belongs_to :user
+- belongs_to :post
