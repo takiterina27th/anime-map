@@ -78,3 +78,9 @@ end
 #デプロイ関係
 gem 'carrierwave'
 gem 'fog-aws'
+
+#ビュー関係
+gem "font-awesome-rails"
+gem 'font-awesome-sass'
+gem 'haml-rails'
+gem 'jquery-rails'
