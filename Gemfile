@@ -79,6 +79,10 @@ end
 gem 'carrierwave'
 gem 'fog-aws'
 
+# セキュリティの関係で以下gemはversio指定も追記する
+gem 'nokogiri', '>= 1.10.4'
+gem 'devise', '~> 4.7.1'
+
 #ビュー関係
 gem "font-awesome-rails"
 gem 'font-awesome-sass'
