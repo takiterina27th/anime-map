@@ -8,11 +8,11 @@
       %li{"data-slide-to" => "2", "data-target" => "#carouselExampleIndicators"}
     .carousel-inner
       .carousel-item.active
-        %img.d-block.w-100{:alt => "...", :src => "..."}/
+        = image_tag('first_slide.jpg', class: "d-block w-100", alt: "First slide")
       .carousel-item
-        %img.d-block.w-100{:alt => "...", :src => "..."}/
+        = image_tag('second_slide.jpg', class: "d-block w-100", alt: "Second slide")
       .carousel-item
-        %img.d-block.w-100{:alt => "...", :src => "..."}/
+        = image_tag('third_slide.jpg', class: "d-block w-100", alt: "Third slide")
     %a.carousel-control-prev{"data-slide" => "prev", :href => "#carouselExampleIndicators", :role => "button"}
       %span.carousel-control-prev-icon{"aria-hidden" => "true"}
       %span.sr-only Previous
