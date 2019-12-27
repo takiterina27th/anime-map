@@ -14,8 +14,15 @@
     color: white;
     .col-lg-4 {
       text-align: center;
+      .icon {
+        height: 140px;
+        width: 140px;
+        color: white;
+        background: black;
+        font-size: 150px;
+      }
       h2 {
-        padding: 30px 0;
+        padding: 50px 0;
       }
     }
   }
