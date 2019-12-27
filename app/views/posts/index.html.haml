@@ -1,0 +1,48 @@
+.top-warpper
+  = render "shared/header"
+
+  #carouselExampleIndicators.carousel.slide{"data-ride" => "carousel"}
+    %ol.carousel-indicators
+      %li.active{"data-slide-to" => "0", "data-target" => "#carouselExampleIndicators"}
+      %li{"data-slide-to" => "1", "data-target" => "#carouselExampleIndicators"}
+      %li{"data-slide-to" => "2", "data-target" => "#carouselExampleIndicators"}
+    .carousel-inner
+      .carousel-item.active
+        = image_tag('first_slide.jpg', class: "d-block w-100", alt: "First slide")
+      .carousel-item
+        = image_tag('second_slide.jpg', class: "d-block w-100", alt: "Second slide")
+      .carousel-item
+        = image_tag('third_slide.jpg', class: "d-block w-100", alt: "Third slide")
+    %a.carousel-control-prev{"data-slide" => "prev", :href => "#carouselExampleIndicators", :role => "button"}
+      %span.carousel-control-prev-icon{"aria-hidden" => "true"}
+      %span.sr-only Previous
+    %a.carousel-control-next{"data-slide" => "next", :href => "#carouselExampleIndicators", :role => "button"}
+      %span.carousel-control-next-icon{"aria-hidden" => "true"}
+      %span.sr-only Next
+
+  .jumbotron.jumbotron-fluid.information
+    .container
+      %h1.display-4 アニメの舞台を旅しよう
+      %p.lead 好きなアニメの聖地を登録できるサイトです
+
+  .login_botton
+    %button.btn.btn-info.w-25{:type => "button"} ログイン
+
+
+
+
+  .row
+    .col-lg-4
+      = fa_icon 'map', class: 'icon'
+      %h2 登録された聖地のある場所が地図で分かります。
+      %p
+    .col-lg-4
+      = fa_icon 'comment', class: 'icon'
+      %h2 自由にコメントをすることができます。
+      %p
+    .col-lg-4
+      = fa_icon 'star', class: 'icon'
+      %h2 好きな聖地はお気に入りに登録できます。
+      %p
+
+  = render "shared/footer"
