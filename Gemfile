@@ -92,4 +92,4 @@ gem "font-awesome-rails"
 gem 'haml-rails'
 gem 'erb2haml'
 gem 'jquery-rails'
-gem 'bootstrap', '~> 4.1.1'
+gem 'bootstrap', '~> 4.3.1'
