@@ -1,1 +1,16 @@
-hello world
+.container
+  %h1.form-heading login Form
+  .login-form
+    .main-div
+      .panel
+        %h2 Admin Login
+        %p Please enter your email and password
+      %form#Login
+        .form-group
+          %input#inputEmail.form-control{placeholder: "Email Address", type: "email"}/
+        .form-group
+          %input#inputPassword.form-control{placeholder: "Password", type: "password"}/
+        .forgot
+          %a{href: "reset.html"} Forgot password?
+        %button.btn.btn-primary{type: "submit"} Login
+    %p.botto-text Designed by Sunil Rajput
