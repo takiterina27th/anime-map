@@ -4,4 +4,7 @@ class PostsController < ApplicationController
 
   def login
   end
+
+  def regstration
+  end
 end
