@@ -3,6 +3,9 @@
     .main_head 新規登録
     %form
       .form-group
+        %label ニックネーム
+        %input.form-control
+      .form-group
         %label{:for => "exampleInputEmail1"} Email address
         %input#exampleInputEmail1.form-control{"aria-describedby" => "emailHelp", :type => "email"}/
         %small#emailHelp.form-text.text-muted We'll never share your email with anyone else.
