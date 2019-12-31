@@ -4,16 +4,10 @@
     .main_head 新規登録
     %form
       .form-group
-        %label ニックネーム
-        %input.form-control
-      .form-group
         %label{:for => "exampleInputEmail1"} メールアドレス
         %input#exampleInputEmail1.form-control{"aria-describedby" => "emailHelp", :type => "email"}/
       .form-group
         %label{:for => "exampleInputPassword1"} パスワード
-        %input#exampleInputPassword1.form-control{:type => "password"}/
-      .form-group
-        %label{:for => "exampleInputPassword1"} パスワード(確認用)
         %input#exampleInputPassword1.form-control{:type => "password"}/
       %button.btn.btn-info.regstration-submit{:type => "submit"} 登録する
   .footer
