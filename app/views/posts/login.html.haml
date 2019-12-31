@@ -1,14 +1,16 @@
-.container
-  .login-form
-    .main-div
-      .panel
-        %h2 ユーザー ログイン
-        %p 必要事項を入力してください。
-      %form#Login
-        .form-group
-          %input#inputEmail.form-control{placeholder: "メールアドレス", type: "email"}/
-        .form-group
-          %input#inputPassword.form-control{placeholder: "パスワード", type: "password"}/
-        .forgot
-          %a{href: "#"} パスワードを忘れた方
-        %button.btn.btn-primary{type: "submit"} ログイン
+.login-container
+  .header
+  .main
+    .main_head AnimeMapにログインする
+    %form
+      .form-group
+        %label{:for => "exampleInputEmail1"} メールアドレス
+        %input#exampleInputEmail1.form-control{"aria-describedby" => "emailHelp", :type => "email"}/
+      .form-group
+        %label{:for => "exampleInputPassword1"} パスワード
+        %input#exampleInputPassword1.form-control{:type => "password"}/
+      .forget 
+        .forget__message パスワードをお忘れの方は
+        = link_to 'こちら', root_path, class: "forget__link"
+      %button.btn.btn-info.regstration-submit{:type => "submit"} ログイン
+  .footer
