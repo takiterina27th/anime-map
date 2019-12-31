@@ -13,7 +13,6 @@
     border-radius: 10px;
     margin: 0px auto 0px;
     padding: 30px 50px;
-    height: 100%;
     width: 400px;
     background: #f8f8f8	;
     &_head {
@@ -29,9 +28,7 @@
   }
   .footer {
     background: gray;
-    margin: 0px auto 0px;
-    padding: 50px;
     height: 100px;
-    width: 400px;
+    width: 100%;
   }
 }
