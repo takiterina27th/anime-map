@@ -9,5 +9,8 @@
       .form-group
         %label{:for => "exampleInputPassword1"} パスワード
         %input#exampleInputPassword1.form-control{:type => "password"}/
+      .forget 
+        .forget__message パスワードをお忘れの方は
+        = link_to 'こちら', root_path, class: "forget__link"
       %button.btn.btn-info.regstration-submit{:type => "submit"} ログイン
   .footer
