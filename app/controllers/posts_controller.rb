@@ -7,4 +7,7 @@ class PostsController < ApplicationController
 
   def regstration
   end
+
+  def display
+  end
 end
