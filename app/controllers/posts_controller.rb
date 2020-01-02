@@ -10,4 +10,7 @@ class PostsController < ApplicationController
 
   def display
   end
+
+  def search
+  end
 end
