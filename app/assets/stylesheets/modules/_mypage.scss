@@ -5,6 +5,7 @@
   .container {
     padding-right: 0px;
     padding-left: 0px;
+    padding-bottom: 20px;
     .user-panel {
       margin: 20px auto 0;
       background-color: #000;
@@ -66,7 +67,7 @@
     }
     .my-posts-main {
       .posts-container {
-        margin: 20px auto 20px;
+        margin: 20px auto 0px;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 20px 20px; 
