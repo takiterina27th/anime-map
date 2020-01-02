@@ -8,6 +8,13 @@
     border-bottom: 1px solid #eeeeee;
     margin: 0 auto;
     width: 90%;
+    display: flex;
+    .search-keyword {
+      color: #fff;
+      font-size: 30px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
     &__text {
       color: #fff;
       font-size: 30px;
