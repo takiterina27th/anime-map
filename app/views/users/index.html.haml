@@ -1,3 +1,15 @@
+
 .mypage-wrapper
   = render "shared/header"
-  = render "shared/footer"
+  .container
+    .user-panel
+      .panel-body
+        .info
+          .info__img
+            .img-thumbnail
+              = image_tag('no_image.jpg', class: ".img-thumbnail__display", alt: "no_image.jpg", size: '110x110')
+          .info__details
+            .info__details__name test
+            .info__details__description 
+
+= render "shared/footer"

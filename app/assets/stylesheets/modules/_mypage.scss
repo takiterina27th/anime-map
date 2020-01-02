@@ -1,0 +1,56 @@
+.mypage-wrapper {
+  background: #111;
+  margin-right: auto;
+  margin-left: auto;
+  .container {
+    padding-right: 0px;
+    padding-left: 0px;
+    .user-panel {
+      margin: 20px auto 0;
+      background-color: #000;
+      color: #FFFFFF;
+      border: none;
+      border: 1px solid #222;
+      .panel-body {
+        padding: 15px;
+        .info {
+          display: flex;
+          &__img {
+            position: relative;
+            min-height: 1px;
+            padding-right: 8px;
+            padding-left: 8px;
+            .img-thumbnail {
+              display: inline-block;
+              height: auto;
+              max-width: 100%;
+              padding: 4px;
+              line-height: 1.428571429;
+              background-color: #ffffff;
+              border: 1px solid #dddddd;
+              border-radius: 4px;
+              &__display {
+                overflow: hidden;
+                padding: 0px;
+                width: 110px;
+                height: 110px;
+              }
+            }
+          }
+          &__details {
+            display: flex;
+            &__name {
+              font-size: 24px;
+              margin-top: 20px;
+              margin-bottom: 10px;
+              padding-right: 8px;
+              padding-left: 24px;
+            }
+            &__description {
+            }
+          }
+        }
+      }
+    }
+  }
+}
