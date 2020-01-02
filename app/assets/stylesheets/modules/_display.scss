@@ -29,6 +29,20 @@
         border: none;
         box-shadow: 0 0 6px #333;
         border-radius: 4px;
+        .card-img-top {
+
+        }
+        .card-body {
+          color: #ccc;
+          padding: 9px;
+          .card-title {
+            margin-top: 0;
+          }
+          .card-user {
+            padding-bottom: 10px;
+            border-bottom: 1px solid #333;
+          }
+        }
       }
       
     }
