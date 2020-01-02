@@ -2,7 +2,6 @@
   background: #111;
   margin-right: auto;
   margin-left: auto;
-  
   .head {
     padding-bottom: 9px;
     margin: 0px 0 20px;
@@ -23,7 +22,6 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 20px 20px; 
-      
       .thumbnail {
         background-color: #000;
         border: none;
@@ -65,7 +63,6 @@
           }
         }
       }
-      
     }
   }
 }
