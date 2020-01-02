@@ -29,8 +29,25 @@
         border: none;
         box-shadow: 0 0 6px #333;
         border-radius: 4px;
-        .card-img-top {
-
+        padding: 4px;
+        display: block;
+        height: auto;
+        max-width: 100%;
+        padding: 4px;
+        .card-top {
+          position: relative;
+          max-width: 267px;
+          height: 177px;
+          overflow: hidden;
+          &__img {
+            position: absolute;
+            left: -100%;
+            top: -100%;
+            bottom: -100%;
+            right: -100%;
+            max-width: 267px;
+            margin: auto;
+          }
         }
         .card-body {
           color: #ccc;

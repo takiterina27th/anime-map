@@ -5,7 +5,8 @@
   .main
     .posts-container
       .card.h-100.thumbnail
-        %img.card-img-top{:alt => "...", :src => "..."}/
+        .card-top
+          = image_tag('first_slide.jpg', class: "card-top__img", alt: "First slide")
         .card-body
           %h5.card-title Card title
           %p.card-user test-user
@@ -13,7 +14,8 @@
             = fa_icon 'star', class: 'icon'
             %span 0
       .card.h-100.thumbnail
-        %img.card-img-top{:alt => "...", :src => "..."}/
+        .card-top
+          = image_tag('second_slide.jpg', class: "card-top__img", alt: "second_slide")
         .card-body
           %h5.card-title Card title
           %p.card-user test-user
@@ -21,7 +23,8 @@
             = fa_icon 'star', class: 'icon'
             %span 0
       .card.h-100.thumbnail
-        %img.card-img-top{:alt => "...", :src => "..."}/
+        .card-top
+          = image_tag('third_slide.jpg', class: "card-top__img", alt: "third_slide")
         .card-body
           %h5.card-title Card title
           %p.card-user test-user
@@ -29,7 +32,8 @@
             = fa_icon 'star', class: 'icon'
             %span 0
       .card.h-100.thumbnail
-        %img.card-img-top{:alt => "...", :src => "..."}/
+        .card-top
+          = image_tag('first_sample.jpg', class: "card-top__img", alt: "first_sample")
         .card-body
           %h5.card-title Card title
           %p.card-user test-user
@@ -37,7 +41,8 @@
             = fa_icon 'star', class: 'icon'
             %span 0
       .card.h-100.thumbnail
-        %img.card-img-top{:alt => "...", :src => "..."}/
+        .card-top
+          = image_tag('second_sample.jpg', class: "card-top__img", alt: "second_sample")
         .card-body
           %h5.card-title Card title
           %p.card-user test-user
