@@ -52,5 +52,17 @@
         }
       }
     }
+    .my-posts__head {
+      padding-bottom: 9px;
+      margin: 0px 0 20px;
+      border-bottom: 1px solid #eeeeee;
+      margin: 0 auto;
+      &__text {
+        color: #fff;
+        font-size: 30px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+    }
   }
 }
