@@ -19,7 +19,18 @@
   .main {
     .posts-container {
       width: 90%;
-      margin: 20px auto 0;
+      margin: 20px auto 20px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px 20px; 
+      
+      .thumbnail {
+        background-color: #000;
+        border: none;
+        box-shadow: 0 0 6px #333;
+        border-radius: 4px;
+      }
+      
     }
   }
 }
