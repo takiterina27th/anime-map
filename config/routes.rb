@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get 'posts/regstration', to: 'posts#regstration'
   get 'posts/display', to: 'posts#display'
   get 'posts/search', to: 'posts#search'
+  get 'users/index', to: 'users#index'
 end
