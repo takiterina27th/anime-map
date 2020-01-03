@@ -51,6 +51,35 @@
         }
       }
     }
+    .menu-panel {
+      margin: 20px auto 0;
+      background-color: #000;
+      color: #FFFFFF;
+      border: none;
+      border: 1px solid #222;
+      .panel-body {
+        .info {
+          &__head {
+            color: #999999;
+            padding: 15px 15px;
+            font-size: 18px;
+            line-height: 20px;
+          }
+          &__menu {
+            display: flex;
+            font-size: 12px;
+            &__content1 {
+              padding: 15px;
+              cursor: pointer;
+            }
+            &__content2 {
+              padding: 15px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
     .my-posts__head {
       padding-bottom: 9px;
       margin: 0px 0 20px;
