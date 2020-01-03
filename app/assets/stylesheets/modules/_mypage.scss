@@ -1,10 +1,9 @@
 .mypage-wrapper {
   background: #111;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
   .container {
-    padding-right: 0px;
-    padding-left: 0px;
+    padding-right: 0;
+    padding-left: 0;
     padding-bottom: 20px;
     .user-panel {
       margin: 20px auto 0;
@@ -19,8 +18,7 @@
           &__img {
             position: relative;
             min-height: 1px;
-            padding-right: 8px;
-            padding-left: 8px;
+            padding: 0 8px;
             .img-thumbnail {
               display: inline-block;
               height: auto;
