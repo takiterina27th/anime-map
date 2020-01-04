@@ -1,0 +1,40 @@
+.new-post-container {
+  background: gray;
+  width: 100%;
+  .header {
+    background: gray;
+    margin: 0px auto 0px;
+    padding: 50px;
+    height: 100px;
+    width: 400px;
+  }
+  .main {
+    border-radius: 10px;
+    margin: 0px auto 0px;
+    padding: 30px 50px;
+    width: 400px;
+    background: #f8f8f8	;
+    &_head {
+      font-size: 20px;
+      text-align: center;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #c0c0c0;
+    }
+    form {
+      .form-group {
+        margin-top: 10px;
+      }
+      .regstration-submit {
+        margin-top: 20px;
+      }
+      .input-file {
+        
+      }
+    }
+  }
+  .footer {
+    background: gray;
+    height: 100px;
+    width: 100%;
+  }
+}

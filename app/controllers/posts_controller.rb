@@ -13,4 +13,7 @@ class PostsController < ApplicationController
 
   def search
   end
+
+  def new
+  end
 end
