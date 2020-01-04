@@ -1,6 +1,5 @@
 .new-post-container {
   background: gray;
-  height: 100%;
   width: 100%;
   .header {
     background: gray;
@@ -32,5 +31,10 @@
         
       }
     }
+  }
+  .footer {
+    background: gray;
+    height: 100px;
+    width: 100%;
   }
 }
