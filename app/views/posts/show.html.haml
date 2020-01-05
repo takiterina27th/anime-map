@@ -1,0 +1,24 @@
+.show-wrapper
+  = render "shared/header"
+  .show-wrapper
+    .main-photo
+      = image_tag('first_slide.jpg', class: "img-responsive center-block", alt: "First slide")
+    .post-info
+      .post-info__head
+        .col-xs-12.col-sm-5.col-md-6.pb010
+          .title ひなみざわ
+          .user-info
+            .user-info__img
+              = image_tag('no_image.jpg', class: "img-thumbnail__display", alt: "no_image.jpg")
+            .user-info__details
+              .user-info__details__username test
+              .user-info__details__date 投稿日：2019年12月21日07時28分55秒
+        .col-xs-12.col-sm-7.col-md-6
+          .post-details
+            .post-details__anime-title 作品名: ひぐらしのなく頃に
+            .post-details__place 場所:    白川郷
+            .post-details__description ひぐらしのなく頃にの聖地です。
+      .post-info__map
+        .post-info__map__details
+          = image_tag('shirakawago_map.jpg', class: "img-responsive center-block", alt: "shirakawago_map")
+  = render "shared/footer"
