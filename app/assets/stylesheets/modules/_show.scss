@@ -18,5 +18,44 @@
         max-width: 100%;
       }
     }
+    .post-info {
+      &__head {
+        color: #333333;
+        background-color: #f5f5f5;
+        border-color: #dddddd;
+        padding: 10px 15px;
+        border-bottom: 1px solid transparent;
+        border-top-right-radius: 3px;
+        border-top-left-radius: 3px;
+        .title {
+          font-size: 24px;
+          margin: 10px 0;
+        }
+        .user-img {
+          overflow: hidden;
+          padding: 0px;
+          width: 70px;
+          height: 70px;
+          margin: 0 0 11px;
+          position: relative;
+          text-align: left;
+          .img-thumbnail__display {
+            width: 70px;
+            height: 70px;
+          }
+        }
+        .deatails {
+          padding-top: 20px;
+          &__user-name {
+          }
+          &__anime-title {
+
+          }
+          &__place {
+
+          }
+        }
+      }
+    }
   }
 }
