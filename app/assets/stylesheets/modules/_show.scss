@@ -31,28 +31,33 @@
           font-size: 24px;
           margin: 10px 0;
         }
-        .user-img {
-          overflow: hidden;
-          padding: 0px;
-          width: 70px;
-          height: 70px;
-          margin: 0 0 11px;
-          position: relative;
-          text-align: left;
-          .img-thumbnail__display {
+        .user-info {
+          display: flex;
+          padding-top: 20px;
+          &__img {
+            overflow: hidden;
+            padding: 0px;
             width: 70px;
             height: 70px;
+            margin: 0 0 11px;
+            position: relative;
+            text-align: left;
+            .img-thumbnail__display {
+              width: 70px;
+              height: 70px;
+            }
           }
-        }
-        .deatails {
-          padding-top: 20px;
-          &__user-name {
-          }
-          &__anime-title {
-
-          }
-          &__place {
-
+          &__details {
+            padding-left: 15px;
+            &__user-name {
+              font-size: 18px;
+              margin-top: 10px;
+              margin-bottom: 10px;
+            }
+            &__date {
+              margin: 0 0 10px;
+              font-size: 14px;
+            }
           }
         }
       }

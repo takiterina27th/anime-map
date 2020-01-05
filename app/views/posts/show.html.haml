@@ -7,11 +7,11 @@
       .post-info__head
         .col-xs-12.col-sm-5.col-md-6.pb010
           .title ひなみざわ
-          .user-img
-            = image_tag('no_image.jpg', class: "img-thumbnail__display", alt: "no_image.jpg")
-          .details
-            .details__username
-            .details__anime-title
-            .details__place
+          .user-info
+            .user-info__img
+              = image_tag('no_image.jpg', class: "img-thumbnail__display", alt: "no_image.jpg")
+            .user-info__details
+              .user-info__details__username test
+              .user-info__details__date 投稿日：2019年12月21日07時28分55秒
       .post-info__map
   = render "shared/footer"
