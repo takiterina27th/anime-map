@@ -2,4 +2,21 @@
   background: #111;
   margin-right: auto;
   margin-left: auto;
+  .show-wrapper {
+    margin-right: auto;
+    margin-left: auto;
+    margin: 0 auto;
+    width: 90%;
+    .main-photo {
+      margin-bottom: 20px;
+      margin-top: 20px;
+      border: 5px solid white ;
+      border-radius: 5px;
+      .img-responsive {
+        display: block;
+        height: auto;
+        max-width: 100%;
+      }
+    }
+  }
 }
