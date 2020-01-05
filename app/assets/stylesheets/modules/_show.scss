@@ -27,6 +27,7 @@
         border-bottom: 1px solid transparent;
         border-top-right-radius: 3px;
         border-top-left-radius: 3px;
+        display: flex;
         .title {
           font-size: 24px;
           margin: 10px 0;
@@ -58,6 +59,21 @@
               margin: 0 0 10px;
               font-size: 14px;
             }
+          }
+        }
+        .post-details {
+          padding-top: 20px;
+          .post-details__anime-title {
+            margin: 0 0 5px;
+            font-size: 14px;
+          }
+          .post-details__place {
+            margin: 0 0 10px;
+            font-size: 14px;
+          }
+          .post-details__description {
+            margin: 0 0 10px;
+            font-size: 14px;
           }
         }
       }
