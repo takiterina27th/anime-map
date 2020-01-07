@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   get 'posts/display', to: 'posts#display'
   get 'posts/search', to: 'posts#search'
   get 'posts/new', to: 'posts#new'
-  get 'posts/show', to: 'posts#show'
+  get 'posts/:id', to: 'posts#show'
   get 'users/index', to: 'users#index'
 end
