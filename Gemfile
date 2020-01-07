@@ -58,6 +58,8 @@ group :development do
   #自動デプロイ用gem
   gem 'ed25519'
   gem 'bcrypt_pbkdf'
+  #デバック関係
+  gem 'binding_of_caller'
 end
 
 group :test do
