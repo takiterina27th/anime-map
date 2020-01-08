@@ -9,10 +9,19 @@
     .carousel-inner
       .carousel-item.active
         = image_tag('first_slide.jpg', class: "d-block w-100", alt: "First slide")
+        .carousel-caption.d-none.d-md-block
+          %h5 ひなみざわ
+          %p 『ひぐらしのなく頃に』の聖地
       .carousel-item
         = image_tag('second_slide.jpg', class: "d-block w-100", alt: "Second slide")
+        .carousel-caption.d-none.d-md-block
+          %h5 南極大陸
+          %p 『宇宙よりも遠い場所』の聖地
       .carousel-item
         = image_tag('third_slide.jpg', class: "d-block w-100", alt: "Third slide")
+        .carousel-caption.d-none.d-md-block
+          %h5 東京タワー
+          %p 『少女☆歌劇 レヴュースタァライト』の聖地
     %a.carousel-control-prev{data:{slide: "prev"}, href: "#carouselExampleIndicators", role: "button"}
       %span.carousel-control-prev-icon{aria:{hidden: "true"}}
       %span.sr-only Previous
@@ -31,15 +40,15 @@
   .row
     .col-lg-4
       = fa_icon 'map', class: 'icon'
-      %h2 登録された聖地のある場所が地図で分かります。
+      %h3 登録された聖地のある場所が地図で分かります。
       %p
     .col-lg-4
       = fa_icon 'comment', class: 'icon'
-      %h2 自由にコメントをすることができます。
+      %h3 自由にコメントをすることができます。
       %p
     .col-lg-4
       = fa_icon 'star', class: 'icon'
-      %h2 好きな聖地はお気に入りに登録できます。
+      %h3 好きな聖地はお気に入りに登録できます。
       %p
 
   = render "shared/footer"
