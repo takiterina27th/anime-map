@@ -8,5 +8,4 @@ Rails.application.routes.draw do
   get 'posts/mypage', to: 'posts#mypage'
   get 'posts/new', to: 'posts#new'
   get 'posts/:id', to: 'posts#show'
-  get 'users/index', to: 'users#index'
 end
