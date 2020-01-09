@@ -1,21 +1,21 @@
-%h2 Sign up
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = render "devise/shared/error_messages", resource: resource
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    - if @minimum_password_length
-      %em
-        (#{@minimum_password_length} characters minimum)
-    %br/
-    = f.password_field :password, autocomplete: "new-password"
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "new-password"
-  .actions
-    = f.submit "Sign up"
-= render "users/shared/links"
+.regstration-container
+  .header
+  .main
+    .main_head 新規登録
+    = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      = render "devise/shared/error_messages", resource: resource
+      .form-group
+        %label ニックネーム
+        = f.text_field :nickname, class: "form-control", placeholder: "必須 (20文字まで)", maxlength:20
+      .form-group
+        %label{for: "exampleInputEmail1"} メールアドレス
+        = f.email_field :email, class: 'form-control', "aria-describedby": "emailHelp", id: 'exampleInputEmail1', placeholder: "必須"
+      .form-group
+        %label{for: "exampleInputPassword1"} パスワード
+        - if @minimum_password_length
+          = f.password_field :password, class: 'form-control', id: 'exampleInputPassword1', placeholder: "必須 (#{@minimum_password_length} 文字まで)"
+      .form-group
+        %label{for: "exampleInputPassword1"} パスワード(確認用)
+        = f.password_field :password_confirmation, class: 'form-control'
+      = f.submit '登録する', class: 'btn btn-info regstration-submit'
+  .footer
