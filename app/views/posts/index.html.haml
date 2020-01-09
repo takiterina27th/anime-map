@@ -35,8 +35,9 @@
       %p.lead 好きなアニメの聖地を登録できるサイトです
 
   .login_botton
-    = link_to new_user_session_path, class: "link" do
-      %button.btn.btn-info.w-25{type: "button"} ログイン
+    - unless user_signed_in?
+      = link_to new_user_session_path, class: "link" do
+        %button.btn.btn-info.w-25{type: "button"} ログイン
 
   .row
     .col-lg-4
