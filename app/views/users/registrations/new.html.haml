@@ -1,0 +1,23 @@
+.regstration-container
+  .header
+  .main
+    .main_head 新規登録
+    = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      .form-group
+        %label ニックネーム
+        = f.text_field :nickname, class: "form-control", placeholder: "必須 (20文字まで)", maxlength:20
+        = render partial: 'users/shared/error-text', locals: {user: @user, column: "nickname"}
+      .form-group
+        %label{for: "exampleInputEmail1"} メールアドレス
+        = f.email_field :email, class: 'form-control', "aria-describedby": "emailHelp", id: 'exampleInputEmail1', placeholder: "必須"
+        = render partial: 'users/shared/error-text', locals: {user: @user, column: "email"}
+      .form-group
+        %label{for: "exampleInputPassword1"} パスワード
+        - if @minimum_password_length
+          = f.password_field :password, class: 'form-control', id: 'exampleInputPassword1', placeholder: "必須 (#{@minimum_password_length} 文字まで)"
+          = render partial: 'users/shared/error-text', locals: {user: @user, column: "password"}
+      .form-group
+        %label{for: "exampleInputPassword1"} パスワード(確認用)
+        = f.password_field :password_confirmation, class: 'form-control'
+      = f.submit '登録する', class: 'btn btn-info regstration-submit'
+  .footer
