@@ -4,8 +4,6 @@ Rails.application.routes.draw do
     sessions: "users/sessions",
   }
   root 'posts#index'
-  get 'posts/login', to: 'posts#login'
-  get 'posts/regstration', to: 'posts#regstration'
   get 'posts/display', to: 'posts#display'
   get 'posts/search', to: 'posts#search'
   get 'posts/mypage', to: 'posts#mypage'
