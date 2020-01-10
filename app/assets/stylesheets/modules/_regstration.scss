@@ -24,6 +24,14 @@
     form {
       .form-group {
         margin-top: 10px;
+        .error-text {
+          color: #ea352d;
+          line-height: 1.5;
+          font-size: 14px;
+          li {
+            margin-top: 8px;
+          }
+        }
       }
       .regstration-submit {
         margin-top: 20px;
