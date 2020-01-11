@@ -48,6 +48,7 @@ Things you may want to cover:
 |name|string|null: false|
 |image|string|null: false|
 |anime_title|string|null: false|
+|place|string|null: false|
 |description|string|null: false|
 |user_id|references|foreign_key: true|
 
