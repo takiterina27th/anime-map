@@ -15,11 +15,26 @@ class PostsController < ApplicationController
   end
 
   def create
+    @post = Post.new(post_params)
   end
 
   def show
   end
 
   def mypage
+  end
+
+  private
+
+  def post_params
+      params.require(:post).permit(
+        :name,
+        :description,
+        :image,
+        :anime_title,
+        :place,
+        :user_id
+      )
+      .merge(user_id: current_user.id)
   end
 end
