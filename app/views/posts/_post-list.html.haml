@@ -1,9 +1,12 @@
-.card.h-100.thumbnail
-  .card-top
-    = image_tag('first_slide.jpg', class: "card-top__img", alt: "First slide")
-  .card-body
-    %h5.card-title Card title
-    %p.card-user test-user
-    .text-right
-      = fa_icon 'star', class: 'icon'
-      %span 0
+= link_to post_path(post), class: "show-link" do
+  .card.h-100.thumbnail
+    .card-top
+      = image_tag post.image.url, class: 'card-top__img'
+    .card-body
+      %h5.card-title
+        = post.name
+      %p.card-user
+        = post.user.nickname
+      .text-right
+        = fa_icon 'star', class: 'icon'
+        %span 0
