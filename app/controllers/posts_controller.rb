@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   end
 
   def display
-    @posts = Post.all
+    @posts = Post.all.order('id DESC').limit(24)
   end
 
   def search
