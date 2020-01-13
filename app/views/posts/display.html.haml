@@ -4,6 +4,7 @@
     .head__text 全ての投稿
   .main
     .posts-container
+      = render partial: 'posts/post-list'
       .card.h-100.thumbnail
         .card-top
           = image_tag('first_slide.jpg', class: "card-top__img", alt: "First slide")
