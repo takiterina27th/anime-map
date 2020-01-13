@@ -98,3 +98,6 @@ gem 'bootstrap', '~> 4.1.1'
 
 #エラーメッセージの日本語化
 gem 'rails-i18n'
+
+# 画像リサイズ用
+gem 'mini_magick'
