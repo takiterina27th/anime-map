@@ -2,8 +2,15 @@ ja:
   activerecord:
     models:
       user: ユーザー
+      post: 投稿
     attributes:
       user:
         nickname: ニックネーム
         email: メールアドレス
         password: パスワード
+      post:
+        name: 名前
+        image: 画像
+        place: 地名
+        anime_title: 作品タイトル
+        description: 説明
