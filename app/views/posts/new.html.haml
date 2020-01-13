@@ -4,19 +4,19 @@
     .main_head 新規投稿
     = form_with model: @post, class: "form", id: "post-form" do |f|
       .form-group
-        %label タイトル
         %input.form-control
+        = f.label :name, "名前"
       .form-group
-        %label 画像をアップロード
         %input.input-file{type: "file"}
+        = f.label :image, "画像をアップロード"
       .form-group
-        %label 地名
         %input.form-control
+        = f.label :place, "地名"
       .form-group
-        %label 作品タイトル
         %input.form-control
+        = f.label :anime_title, "作品タイトル"
       .form-group
-        %label 説明
         %textarea.form-control{rows: "4"}
       %button.btn.btn-info.new-post-submit{type: "submit"} 投稿する
+        = f.label :description, "説明"
   .footer
