@@ -2,7 +2,7 @@
   .header
   .main
     .main_head 新規投稿
-    = form_with model: @post, class: "form", id: "post-form" do |f|
+    = form_with model: @post, local: true, class: "form", id: "post-form" do |f|
       .form-group
         = f.label :name, "名前"
         = f.text_field :name, class: "form-control", placeholder: "名前（必須 40文字まで）", maxlength:40
