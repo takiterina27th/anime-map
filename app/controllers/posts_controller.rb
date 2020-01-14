@@ -53,6 +53,8 @@ class PostsController < ApplicationController
     if @post.user_id == current_user.id
       @post.destroy
       redirect_to :root
+    else
+      redirect_to :root
     end
   end
 
