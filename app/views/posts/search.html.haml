@@ -1,6 +1,11 @@
 .search-warpper
   = render "shared/header"
-  - if @search_posts.present?
+  - if params[:q][:name_cont] == ""
+    .new-posts 新規投稿
+    .main
+      .posts-container
+        = render partial: 'posts/post-list', collection: @posts, as: "post"
+  - elsif @search_posts.present?
     .head
       .bracket 「
       .search-keyword
@@ -9,19 +14,7 @@
       .head__text の検索結果
     .main
       .posts-container
-        - @search_posts.each do |post|
-          = link_to post_path(post), class: "show-link" do
-            .card.h-100.thumbnail
-              .card-top
-                = image_tag post.image.url, class: 'card-top__img'
-              .card-body
-                %h5.card-title
-                  = post.name
-                %p.card-user
-                  = post.user.nickname
-                .text-right
-                  = fa_icon 'star', class: 'icon'
-                  %span 0
+        = render partial: 'posts/post-list', collection: @search_posts, as: "post"
   - else
     .head
       .bracket 「
@@ -30,7 +23,7 @@
       .bracket 」
       .head__text
         に一致する投稿はありません。
-    .new-posts 新規投稿を表示
+    .new-posts 新規投稿
     .main
       .posts-container
         = render partial: 'posts/post-list', collection: @posts, as: "post"
