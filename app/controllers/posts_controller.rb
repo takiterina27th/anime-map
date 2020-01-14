@@ -5,6 +5,7 @@ class PostsController < ApplicationController
   end
 
   def display
+    @posts = Post.order('id DESC').limit(24).includes(:user)
   end
 
   def search

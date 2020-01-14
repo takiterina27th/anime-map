@@ -6,5 +6,9 @@ footer {
   line-height: 10vh;
   p {
     margin: 0;
+    .footer-logo {
+      text-decoration: none;
+      color: #fff;
+    }
   }
 } 

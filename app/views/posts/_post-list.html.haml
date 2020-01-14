@@ -1,0 +1,12 @@
+= link_to post_path(post), class: "show-link" do
+  .card.h-100.thumbnail
+    .card-top
+      = image_tag post.image.url, class: 'card-top__img'
+    .card-body
+      %h5.card-title
+        = post.name
+      %p.card-user
+        = post.user.nickname
+      .text-right
+        = fa_icon 'star', class: 'icon'
+        %span 0
