@@ -19,7 +19,7 @@
         .col-xs-12.col-sm-7.col-md-6
           .post-details
             .post-details__anime-title
-              = "作品名: #{@post.anime_title}"
+              = "作品名: 『#{@post.anime_title}』"
             .post-details__place
               = "場所: #{@post.place}"
           - if user_signed_in? && @post.user_id == current_user.id
