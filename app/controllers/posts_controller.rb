@@ -31,10 +31,29 @@ class PostsController < ApplicationController
   def mypage
   end
 
+  def edit
+    @post = Post.find(params[:id])
+  end
+
+  def update
+    @post = Post.find(params[:id])
+    if @post.user_id == current_user.id
+      if @post.update(post_params)
+        redirect_to post_path(@post)
+      else
+        render "edit"
+      end
+    else
+      redirect_to :root
+    end
+  end
+
   def destroy
     @post = Post.find(params[:id])
     if @post.user_id == current_user.id
       @post.destroy
+      redirect_to :root
+    else
       redirect_to :root
     end
   end
