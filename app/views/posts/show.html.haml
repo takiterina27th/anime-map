@@ -2,22 +2,28 @@
   = render "shared/header"
   .show-wrapper
     .main-photo
-      = image_tag('first_slide.jpg', class: "img-responsive center-block", alt: "First slide")
+      = image_tag @post.image.url, class: 'img-responsive center-block'
     .post-info
       .post-info__head
         .col-xs-12.col-sm-5.col-md-6.pb010
-          .title ひなみざわ
+          .title
+            = @post.name
           .user-info
             .user-info__img
               = image_tag('no_image.jpg', class: "img-thumbnail__display", alt: "no image")
             .user-info__details
-              .user-info__details__username test
-              .user-info__details__date 投稿日：2019年12月21日07時28分55秒
+              .user-info__details__username
+                = @post.user.nickname
+              .user-info__details__date
+                = "投稿日: #{@post.created_at}"
         .col-xs-12.col-sm-7.col-md-6
           .post-details
-            .post-details__anime-title 作品名：ひぐらしのなく頃に
-            .post-details__place 場所：白川郷
-            .post-details__description ひぐらしのなく頃にの聖地です。
+            .post-details__anime-title
+              = "作品名: #{@post.anime_title}"
+            .post-details__place
+              = "場所: #{@post.place}"
+            .post-details__description
+              = @post.description
       .post-info__map
         .post-info__map__details
           = image_tag('shirakawago_map.jpg', class: "img-responsive center-block", alt: "shirakawago map")
