@@ -1,7 +1,10 @@
 .search-warpper
   = render "shared/header"
   .head
-    .search-keyword 「」
+    .bracket 「
+    .search-keyword
+      = params[:q][:name_cont]
+    .bracket 」
     .head__text の検索結果
   .main
     .posts-container
