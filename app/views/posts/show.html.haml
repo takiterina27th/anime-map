@@ -29,4 +29,16 @@
         .post-info__middle__right.col-xs-12.col-sm-7.col-md-7.pb010
           .post-info__middle__right__map
             = image_tag('shirakawago_map.jpg', class: "img-responsive center-block", alt: "shirakawago map")
+      .post-info__foot
+        .post-info__foot__left.col-md-8
+          .comment
+            .comment__head
+              = fa_icon 'comment', class: 'icon'
+              この写真のコメント
+            .comment__body
+              .comment__body__head
+                .comment__body__head__user test
+                .comment__body__head__time 20200114
+              .comment__body__text aaaaaaaaaaaaaaaaa
+        .post-info__foot__right
   = render "shared/footer"
