@@ -38,8 +38,13 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     if @post.user_id == current_user.id
-      @post.update(post_params)
-      redirect_to post_path(@post)
+      if @post.update(post_params)
+        redirect_to post_path(@post)
+      else
+        render "edit"
+      end
+    else
+      redirect_to :root
     end
   end
 
