@@ -2,23 +2,49 @@
   = render "shared/header"
   .show-wrapper
     .main-photo
-      = image_tag('first_slide.jpg', class: "img-responsive center-block", alt: "First slide")
+      = image_tag @post.image.url, class: 'img-responsive center-block'
     .post-info
       .post-info__head
         .col-xs-12.col-sm-5.col-md-6.pb010
-          .title ひなみざわ
+          .title
+            = @post.name
           .user-info
             .user-info__img
               = image_tag('no_image.jpg', class: "img-thumbnail__display", alt: "no image")
             .user-info__details
-              .user-info__details__username test
-              .user-info__details__date 投稿日：2019年12月21日07時28分55秒
+              .user-info__details__username
+                = @post.user.nickname
+              .user-info__details__date
+                = "投稿日: #{@post.created_at.strftime("%Y年%m月%d日 %H時%M分")}"
         .col-xs-12.col-sm-7.col-md-6
           .post-details
-            .post-details__anime-title 作品名：ひぐらしのなく頃に
-            .post-details__place 場所：白川郷
-            .post-details__description ひぐらしのなく頃にの聖地です。
-      .post-info__map
-        .post-info__map__details
-          = image_tag('shirakawago_map.jpg', class: "img-responsive center-block", alt: "shirakawago map")
+            .post-details__anime-title
+              = "作品名: 『#{@post.anime_title}』"
+            .post-details__place
+              = "場所: #{@post.place}"
+          - if user_signed_in? && @post.user_id == current_user.id
+            .post-option
+              = link_to "#", class: "edit-link" do
+                %button.btn.btn-light{type: "button"} 編集する
+              = link_to "#", class: "delete-link" do
+                %button.btn.btn-light{type: "button"} 削除する
+      .post-info__middle
+        .post-info__middle__left.col-xs-12.col-sm-5.col-md-5.pb010
+          .post-info__middle__left__description
+            = @post.description
+        .post-info__middle__right.col-xs-12.col-sm-7.col-md-7.pb010
+          .post-info__middle__right__map
+            = image_tag('shirakawago_map.jpg', class: "img-responsive center-block", alt: "shirakawago map")
+      .post-info__foot
+        .post-info__foot__left.col-md-8
+          .comment
+            .comment__head
+              = fa_icon 'comment', class: 'icon'
+              この写真のコメント
+            .comment__body
+              .comment__body__head
+                .comment__body__head__user test
+                .comment__body__head__time 20200114
+              .comment__body__text aaaaaaaaaaaaaaaaa
+        .post-info__foot__right
   = render "shared/footer"
