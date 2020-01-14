@@ -31,6 +31,9 @@ class PostsController < ApplicationController
   def mypage
   end
 
+  def destroy
+  end
+
   private
 
   def post_params
