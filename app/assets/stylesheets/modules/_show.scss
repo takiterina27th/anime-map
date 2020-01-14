@@ -30,6 +30,7 @@
         border-top-right-radius: 3px;
         border-top-left-radius: 3px;
         display: flex;
+        position: relative;
         .title {
           font-size: 24px;
           margin: 10px 0;
@@ -65,13 +66,26 @@
         }
         .post-details {
           padding-top: 20px;
-          .post-details__anime-title {
+          &__anime-title {
             margin: 0 0 5px;
             font-size: 14px;
           }
-          .post-details__place {
+          &__place {
             margin: 0 0 10px;
             font-size: 14px;
+          }
+        }
+        .post-option {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          .edit-link {
+            text-decoration: none;
+            .btn {
+            }
+          }
+          .delete-link {
+            text-decoration: none;
           }
         }
       }
