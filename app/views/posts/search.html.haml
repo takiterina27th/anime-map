@@ -1,6 +1,6 @@
 .search-warpper
   = render "shared/header"
-  - if params[:q][:name_cont] == ""
+  - if params[:q][:name_or_anime_title_or_place_or_description_cont] == ""
     .new-posts 新規投稿
     .main
       .posts-container
@@ -9,7 +9,7 @@
     .head
       .bracket 「
       .search-keyword
-        = params[:q][:name_cont]
+        = params[:q][:name_or_anime_title_or_place_or_description_cont]
       .bracket 」
       .head__text の検索結果
     .main
@@ -19,7 +19,7 @@
     .head
       .bracket 「
       .search-keyword
-        = params[:q][:name_cont]
+        = params[:q][:name_or_anime_title_or_place_or_description_cont]
       .bracket 」
       .head__text
         に一致する投稿はありません。

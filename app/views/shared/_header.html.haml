@@ -15,5 +15,5 @@
         %li.nav-item
           = link_to "新規登録", new_user_registration_path, class: "nav-link"
     = search_form_for @q, url: search_posts_path, html: {class: "form-inline my-2 my-lg-0"} do |f|
-      = f.text_field :name_cont , placeholder: "キーワードから検索", class: 'form-control mr-sm-2'
+      = f.text_field :name_or_anime_title_or_place_or_description_cont , placeholder: "キーワードから検索", class: 'form-control mr-sm-2'
       = f.submit "検索", class: "btn btn-outline-success my-2 my-sm-0"
