@@ -1,54 +1,31 @@
 .search-warpper
   = render "shared/header"
-  .head
-    .search-keyword 「」
-    .head__text の検索結果
-  .main
-    .posts-container
-      .card.h-100.thumbnail
-        .card-top
-          = image_tag('first_slide.jpg', class: "card-top__img", alt: "First slide")
-        .card-body
-          %h5.card-title Card title
-          %p.card-user test-user
-          .text-right
-            = fa_icon 'star', class: 'icon'
-            %span 0
-      .card.h-100.thumbnail
-        .card-top
-          = image_tag('second_slide.jpg', class: "card-top__img", alt: "second_slide")
-        .card-body
-          %h5.card-title Card title
-          %p.card-user test-user
-          .text-right
-            = fa_icon 'star', class: 'icon'
-            %span 0
-      .card.h-100.thumbnail
-        .card-top
-          = image_tag('third_slide.jpg', class: "card-top__img", alt: "third_slide")
-        .card-body
-          %h5.card-title Card title
-          %p.card-user test-user
-          .text-right
-            = fa_icon 'star', class: 'icon'
-            %span 0
-      .card.h-100.thumbnail
-        .card-top
-          = image_tag('first_sample.jpg', class: "card-top__img", alt: "first_sample")
-        .card-body
-          %h5.card-title Card title
-          %p.card-user test-user
-          .text-right
-            = fa_icon 'star', class: 'icon'
-            %span 0
-      .card.h-100.thumbnail
-        .card-top
-          = image_tag('second_sample.jpg', class: "card-top__img", alt: "second_sample")
-        .card-body
-          %h5.card-title Card title
-          %p.card-user test-user
-          .text-right
-            = fa_icon 'star', class: 'icon-star'
-            %span 0
+  - if params[:q][:name_or_anime_title_or_place_or_description_cont] == ""
+    .new-posts 新規投稿
+    .main
+      .posts-container
+        = render partial: 'posts/post-list', collection: @posts, as: "post"
+  - elsif @search_posts.present?
+    .head
+      .bracket 「
+      .search-keyword
+        = params[:q][:name_or_anime_title_or_place_or_description_cont]
+      .bracket 」
+      .head__text の検索結果
+    .main
+      .posts-container
+        = render partial: 'posts/post-list', collection: @search_posts, as: "post"
+  - else
+    .head
+      .bracket 「
+      .search-keyword
+        = params[:q][:name_or_anime_title_or_place_or_description_cont]
+      .bracket 」
+      .head__text
+        に一致する投稿はありません。
+    .new-posts 新規投稿
+    .main
+      .posts-container
+        = render partial: 'posts/post-list', collection: @posts, as: "post"
 
   = render "shared/footer"

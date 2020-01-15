@@ -101,3 +101,6 @@ gem 'rails-i18n'
 
 # 画像リサイズ用
 gem 'mini_magick'
+
+#検索機能
+gem 'ransack'

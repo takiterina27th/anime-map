@@ -9,6 +9,7 @@ class PostsController < ApplicationController
   end
 
   def search
+    @posts = Post.order('id DESC').limit(24).includes(:user)
   end
 
   def new
