@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
 
   def set_search
     @q = Post.ransack(params[:q])
-    @search_posts = @q.result(distinct: true).page(params[:page]).per(4)
+    @search_posts = @q.result(distinct: true).page(params[:page]).per(16)
   end
 
   protected

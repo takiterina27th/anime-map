@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   end
 
   def display
-    @posts = Post.order('id DESC').page(params[:page]).per(4).includes(:user)
+    @posts = Post.order('id DESC').page(params[:page]).per(16).includes(:user)
   end
 
   def search
