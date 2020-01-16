@@ -107,3 +107,4 @@ gem 'ransack'
 
 #ページネーション
 gem 'kaminari'
+gem 'kaminari-bootstrap'
