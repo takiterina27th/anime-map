@@ -104,3 +104,7 @@ gem 'mini_magick'
 
 #検索機能
 gem 'ransack'
+
+#ページネーション
+gem 'kaminari'
+gem 'kaminari-bootstrap'
