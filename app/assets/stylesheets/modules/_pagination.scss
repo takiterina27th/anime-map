@@ -1,0 +1,16 @@
+.pagination {
+  justify-content: center;
+  .page-item {
+    .page-link {
+      background-color: black;
+      color: blanchedalmond;
+      border-color: grey;
+    }
+  }
+  .page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: mediumseagreen;
+    border-color: mediumseagreen;
+  }
+}
