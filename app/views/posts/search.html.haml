@@ -15,6 +15,7 @@
     .main
       .posts-container
         = render partial: 'posts/post-list', collection: @search_posts, as: "post"
+    = paginate @search_posts
   - else
     .head
       .bracket 「
