@@ -119,6 +119,41 @@
         display: flex;
         &__left {
           .comment {
+            &__form {
+              &__head {
+                padding-bottom: 9px;
+                margin: 20px 0 20px;
+                border-bottom: 1px solid #eeeeee;
+                display: flex;
+                .icon {
+                  margin-right: 7px;
+                  line-height: 25px;
+                  text-align: center;
+                }
+              }
+              &__body {
+                margin-bottom: 15px;
+                &__text-form {
+                  display: block;
+                  width: 100%;
+                  padding: 6px 12px;
+                  font-size: 14px;
+                  line-height: 1.428571429;
+                  color: #555555;
+                  vertical-align: middle;
+                  background-color: #ffffff;
+                  background-image: none;
+                  border: 1px solid #cccccc;
+                  border-radius: 4px;
+                  margin-bottom: 20px;
+                }
+                &__submit {
+                  text-align: right;
+                  margin-left: auto;
+                  display: block;
+                }
+              }
+            }
             &__head {
               padding-bottom: 9px;
               margin: 20px 0 20px;
@@ -126,6 +161,8 @@
               display: flex;
               .icon {
                 margin-right: 5px;
+                line-height: 25px;
+                text-align: center;
               }
             }
             &__body {

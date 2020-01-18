@@ -1,0 +1,8 @@
+.comment__body
+  .comment__body__head
+    .comment__body__head__user 
+      = comment.user.nickname
+    .comment__body__head__time 
+      = comment.created_at.strftime("%Y年%m月%d日 %H時%M分")
+  .comment__body__text 
+    = simple_format(comment.text)
