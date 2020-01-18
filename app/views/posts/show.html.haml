@@ -49,10 +49,6 @@
             .comment__head
               = fa_icon 'comment', class: 'icon'
               この写真のコメント
-            .comment__body
-              .comment__body__head
-                .comment__body__head__user test
-                .comment__body__head__time 20200114
-              .comment__body__text aaaaaaaaaaaaaaaaa
+            = render partial: 'comments/comments', collection: @comments, as: "comment"
         .post-info__foot__right
   = render "shared/footer"
