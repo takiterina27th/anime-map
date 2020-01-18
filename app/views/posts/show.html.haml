@@ -38,6 +38,13 @@
       .post-info__foot
         .post-info__foot__left.col-md-8
           .comment
+            .comment__form
+              .comment__form__head
+                = fa_icon 'edit', class: 'icon'
+                この写真にコメントする
+              .comment__form__body
+                %textarea{name: "text",rows: "4", cols: 40, maxlength:1000, class: "comment__form__body__text-form form-group"}
+                %input{type: "submit", class: "comment__form__body__submit btn btn-danger", value: "コメントを投稿する"}
             .comment__head
               = fa_icon 'comment', class: 'icon'
               この写真のコメント
