@@ -8,7 +8,8 @@
             .img-thumbnail
               = image_tag('no_image.jpg', class: ".img-thumbnail__display", alt: "no_image.jpg", size: '110x110')
           .info__details
-            .info__details__name test
+            .info__details__name
+              = @user.nickname
             .info__details__description 
     .menu-panel
       .panel-body
@@ -21,50 +22,6 @@
       .my-posts__head__text 過去の投稿
     .my-posts-main
       .posts-container
-        .card.h-100.thumbnail
-          .card-top
-            = image_tag('first_slide.jpg', class: "card-top__img", alt: "First slide")
-          .card-body
-            %h5.card-title Card title
-            %p.card-user test-user
-            .text-right
-              = fa_icon 'star', class: 'icon'
-              %span 0
-        .card.h-100.thumbnail
-          .card-top
-            = image_tag('second_slide.jpg', class: "card-top__img", alt: "second_slide")
-          .card-body
-            %h5.card-title Card title
-            %p.card-user test-user
-            .text-right
-              = fa_icon 'star', class: 'icon'
-              %span 0
-        .card.h-100.thumbnail
-          .card-top
-            = image_tag('third_slide.jpg', class: "card-top__img", alt: "third_slide")
-          .card-body
-            %h5.card-title Card title
-            %p.card-user test-user
-            .text-right
-              = fa_icon 'star', class: 'icon'
-              %span 0
-        .card.h-100.thumbnail
-          .card-top
-            = image_tag('first_sample.jpg', class: "card-top__img", alt: "first_sample")
-          .card-body
-            %h5.card-title Card title
-            %p.card-user test-user
-            .text-right
-              = fa_icon 'star', class: 'icon'
-              %span 0
-        .card.h-100.thumbnail
-          .card-top
-            = image_tag('second_sample.jpg', class: "card-top__img", alt: "second_sample")
-          .card-body
-            %h5.card-title Card title
-            %p.card-user test-user
-            .text-right
-              = fa_icon 'star', class: 'icon-star'
-              %span 0
+        = render partial: 'posts/post-list', collection: @posts, as: "post"
 
 = render "shared/footer"
