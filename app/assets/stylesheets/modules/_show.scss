@@ -63,26 +63,44 @@
             }
           }
         }
-        .post-details {
-          padding-top: 20px;
-          &__anime-title {
-            margin: 0 0 5px;
-            font-size: 14px;
+        .head-right {
+          display: flex;
+          .post-details {
+            padding-top: 20px;
+            &__anime-title {
+              margin: 0 0 5px;
+              font-size: 14px;
+            }
+            &__place {
+              margin: 0 0 10px;
+              font-size: 14px;
+            }
           }
-          &__place {
-            margin: 0 0 10px;
-            font-size: 14px;
+          .post-likes {
+            margin-top: 10px;
+            margin-left: auto;
+              
+            .fav {
+              .icon {
+                font-size: 25px;
+              }
+              .icon-already {
+                font-size: 25px;
+                color: red;
+              }
+            }
+            
           }
-        }
-        .post-option {
-          position: absolute;
-          right: 0;
-          bottom: 0;
-          .edit-link {
-            text-decoration: none;
-          }
-          .delete-link {
-            text-decoration: none;
+          .post-option {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            .edit-link {
+              text-decoration: none;
+            }
+            .delete-link {
+              text-decoration: none;
+            }
           }
         }
       }
