@@ -9,4 +9,5 @@
         = post.user.nickname
       .text-right
         = fa_icon 'star', class: 'icon'
-        %span 0
+        %span 
+          = post.liked_users.count
