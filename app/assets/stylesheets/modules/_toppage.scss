@@ -2,6 +2,59 @@
   background: #111;
   margin-right: auto;
   margin-left: auto;
+  .main {
+    .posts-container {
+      width: 90%;
+      margin: 50px auto 20px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px 20px; 
+      .show-link {
+        text-decoration: none;
+        .thumbnail {
+          background-color: #000;
+          border: none;
+          box-shadow: 0 0 6px #333;
+          border-radius: 4px;
+          padding: 4px;
+          display: block;
+          height: auto;
+          max-width: 100%;
+          padding: 4px;
+          .card-top {
+            position: relative;
+            max-width: 267px;
+            height: 177px;
+            overflow: hidden;
+            &__img {
+              position: absolute;
+              left: -100%;
+              top: -100%;
+              bottom: -100%;
+              right: -100%;
+              max-width: 267px;
+              margin: auto;
+            }
+          }
+          .card-body {
+            color: #ccc;
+            padding: 9px;
+            .card-title {
+              margin-top: 0;
+              margin-bottom: 5px;
+            }
+            .card-user {
+              padding-bottom: 10px;
+              border-bottom: 1px solid #333;
+            }
+            p {
+              margin-bottom: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
   .information {
     background: #111;
     color: white;
