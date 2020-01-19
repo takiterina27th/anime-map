@@ -1,8 +1,11 @@
 .flash {
   text-align: center;
   margin: 0;
+  border-radius: 0;
   &__alert{
     background: orangered;
+    color: white;
+    border-color: orangered;
   }
   &__notice {
   }
