@@ -63,5 +63,12 @@
               = fa_icon 'comment', class: 'icon'
               この写真のコメント
             = render partial: 'comments/comments', collection: @comments, as: "comment"
-        .post-info__foot__right
+        .post-info__foot__right.col-md-4
+          .like
+            .like__head
+              = fa_icon 'heart', class: 'icon'
+              この投稿のお気に入りユーザー
+            - @post.liked_users.each do |user|
+              .like__user
+                = user.nickname
   = render "shared/footer"

@@ -215,6 +215,28 @@
             }
           }
         }
+        &__right {
+          .like {
+            
+            &__head {
+              padding-bottom: 9px;
+              margin: 20px 0 20px;
+              border-bottom: 1px solid #eeeeee;
+              .icon {
+                margin-right: 5px;
+                line-height: 25px;
+                text-align: center;
+              } 
+            }
+            &__user {
+              font-weight: bold;
+              color: #006699;
+              text-decoration: none;
+              margin-right: 5px;
+              display: inline-block;
+            }
+          }
+        }
       }
     }
   }
