@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :display, :search, :show]
 
   def index
-    @posts = Post.order('id DESC').limit(8).includes(:user)
+    @posts = Post.order("RAND()").limit(8).includes(:user)
   end
 
   def display
