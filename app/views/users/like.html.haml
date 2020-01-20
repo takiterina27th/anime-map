@@ -1,0 +1,9 @@
+.display-warpper
+  = render "shared/header"
+  .head
+    .head__text いいねした投稿
+  .main
+    .posts-container
+      = render partial: 'posts/post-list', collection: @user.liked_posts, as: "post"
+
+  = render "shared/footer"
