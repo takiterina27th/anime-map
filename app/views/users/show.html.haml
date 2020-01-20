@@ -23,5 +23,6 @@
     .my-posts-main
       .posts-container
         = render partial: 'posts/post-list', collection: @posts, as: "post"
+      = paginate @posts
 
 = render "shared/footer"

@@ -4,6 +4,7 @@
     .head__text いいねした投稿
   .main
     .posts-container
-      = render partial: 'posts/post-list', collection: @user.liked_posts, as: "post"
+      = render partial: 'posts/post-list', collection: @posts, as: "post"
+  = paginate @posts
 
   = render "shared/footer"
