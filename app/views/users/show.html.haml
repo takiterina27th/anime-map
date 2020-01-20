@@ -17,7 +17,7 @@
           .info__head メニュー
           .info__menu
             .info__menu__content1 プロフィール編集
-            .info__menu__content2 お気に入り
+            = link_to "お気に入り", like_users_path, class: "info__menu__content2"
     .my-posts__head
       .my-posts__head__text 過去の投稿
     .my-posts-main
