@@ -1,0 +1,28 @@
+.mypage-wrapper
+  = render "shared/header"
+  .container
+    .user-panel
+      .panel-body
+        .info
+          .info__img
+            .img-thumbnail
+              = image_tag('no_image.jpg', class: ".img-thumbnail__display", alt: "no_image.jpg", size: '110x110')
+          .info__details
+            .info__details__name
+              = @user.nickname
+            .info__details__description 
+    .menu-panel
+      .panel-body
+        .info
+          .info__head メニュー
+          .info__menu
+            .info__menu__content1 プロフィール編集
+            = link_to "お気に入り", like_users_path, class: "info__menu__content2"
+    .my-posts__head
+      .my-posts__head__text 過去の投稿
+    .my-posts-main
+      .posts-container
+        = render partial: 'posts/post-list', collection: @posts, as: "post"
+      = paginate @posts
+
+= render "shared/footer"
