@@ -3,7 +3,11 @@ Rails.application.routes.draw do
     registrations: 'users/registrations',
     sessions: "users/sessions",
   }
-  resources :users, only: [:show]
+  resources :users, only: [:show] do
+    collection do
+      get :like
+    end
+  end
 
   root 'posts#index'
 
