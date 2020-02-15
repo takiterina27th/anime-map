@@ -1,6 +1,6 @@
 - if user_signed_in?
   - if current_user.already_liked?(@post)
-    = button_to post_like_path(@post), {method: :delete, class: "btn btn-danger fav", remote: true} do
+    = button_to post_like_path(@post, id: @post.id), {method: :delete, class: "btn btn-danger fav", remote: true} do
       = fa_icon 'heart', class: 'icon-already'
       .count
         #{@post.likes.count}
