@@ -24,18 +24,6 @@
               = "場所: #{@post.place}"
           %div{id: "likes_buttons_#{@post.id}", class: "post-likes"}
             = render partial: 'likes/like', locals: { post: @post}
-            -# - if user_signed_in?
-            -#   - if current_user.already_liked?(@post)
-            -#     = button_to post_like_path(@post), {method: :delete, class: "btn btn-danger fav", remote: true} do
-            -#       = fa_icon 'heart', class: 'icon-already'
-            -#       .count
-            -#         #{@post.likes.count}
-            -#   - else
-            -#     = button_to post_likes_path(@post), {class: "btn btn-danger fav", remote: true} do
-            -#       = fa_icon 'heart', class: 'icon'
-            -#       .count
-            -#         #{@post.likes.count}
-
           - if user_signed_in? && @post.user_id == current_user.id
             .post-option
               = link_to edit_post_path(@post), class: "edit-link" do
