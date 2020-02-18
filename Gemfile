@@ -95,6 +95,7 @@ gem 'haml-rails'
 gem 'erb2haml'
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.1.1'
+gem 'gon'
 
 #エラーメッセージの日本語化
 gem 'rails-i18n'
@@ -108,3 +109,10 @@ gem 'ransack'
 #ページネーション
 gem 'kaminari'
 gem 'kaminari-bootstrap'
+
+#google map
+gem 'geocoder'
+gem 'gmaps4rails'
+
+# HTTPリクエスト
+gem 'http'
