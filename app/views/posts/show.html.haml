@@ -36,7 +36,7 @@
             = simple_format(@post.description)
         .post-info__middle__right.col-xs-12.col-sm-7.col-md-7.pb010
           .post-info__middle__right__map
-            = image_tag('shirakawago_map.jpg', class: "img-responsive center-block", alt: "shirakawago map")
+            #map{style: "width: 100%; height: 500px;"}
       .post-info__foot
         .post-info__foot__left.col-md-8
           .comment
@@ -62,3 +62,32 @@
               .like__user
                 = user.nickname
   = render "shared/footer"
+
+:javascript
+  function initMap() {
+
+    var test = {lat: #{@post.latitude}, lng: #{@post.longitude}};
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 15,
+      center: test
+    });
+    var transitLayer = new google.maps.TransitLayer();
+    transitLayer.setMap(map);
+
+    var contentString = '住所：#{@post.place}';
+    var infowindow = new google.maps.InfoWindow({
+      content: contentString
+    });
+
+    var marker = new google.maps.Marker({
+      position:test,
+      map: map,
+      title: contentString
+    });
+
+    marker.addListener('click', function() {
+      infowindow.open(map, marker);
+    });
+  }
+%script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?v=3.exp&key=#{ ENV['GOOGLE_MAP_API_KEY'] }&callback=initMap"}
+  :cdata
