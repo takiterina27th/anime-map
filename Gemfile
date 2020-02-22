@@ -116,3 +116,6 @@ gem 'gmaps4rails'
 
 # HTTPリクエスト
 gem 'http'
+
+# api_keyをgithubに上げない
+gem 'dotenv-rails'
