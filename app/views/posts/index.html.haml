@@ -29,8 +29,9 @@
       %span.carousel-control-next-icon{aria:{hidden: "true"}}
       %span.sr-only Next
   .main
-    .posts-container
-      = render partial: 'posts/post-list', collection: @posts, as: "post"
+    .container
+      .posts-container
+        = render partial: 'posts/post-list', collection: @posts, as: "post"
 
   .jumbotron.jumbotron-fluid.information
     .container
