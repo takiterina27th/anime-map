@@ -1,10 +1,11 @@
 .display-warpper
   = render "shared/header"
-  .head
-    .head__text いいねした投稿
-  .main
-    .posts-container
-      = render partial: 'posts/post-list', collection: @posts, as: "post"
+  .container
+    .head
+      .head__text いいねした投稿
+    .main
+      .posts-container
+        = render partial: 'posts/post-list', collection: @posts, as: "post"
   = paginate @posts
 
   = render "shared/footer"

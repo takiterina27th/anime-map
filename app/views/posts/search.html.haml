@@ -1,32 +1,35 @@
 .search-warpper
   = render "shared/header"
   - if params[:q][:name_or_anime_title_or_place_or_description_cont] == ""
-    .new-posts 新規投稿
-    .main
-      .posts-container
-        = render partial: 'posts/post-list', collection: @posts, as: "post"
+    .container
+      .new-posts 新規投稿
+      .main
+        .posts-container
+          = render partial: 'posts/post-list', collection: @posts, as: "post"
   - elsif @search_posts.present?
-    .head
-      .bracket 「
-      .search-keyword
-        = params[:q][:name_or_anime_title_or_place_or_description_cont]
-      .bracket 」
-      .head__text の検索結果
-    .main
-      .posts-container
-        = render partial: 'posts/post-list', collection: @search_posts, as: "post"
+    .container
+      .head
+        .bracket 「
+        .search-keyword
+          = params[:q][:name_or_anime_title_or_place_or_description_cont]
+        .bracket 」
+        .head__text の検索結果
+      .main
+        .posts-container
+          = render partial: 'posts/post-list', collection: @search_posts, as: "post"
     = paginate @search_posts
   - else
-    .head
-      .bracket 「
-      .search-keyword
-        = params[:q][:name_or_anime_title_or_place_or_description_cont]
-      .bracket 」
-      .head__text
-        に一致する投稿はありません。
-    .new-posts 新規投稿
-    .main
-      .posts-container
-        = render partial: 'posts/post-list', collection: @posts, as: "post"
+    .container
+      .head
+        .bracket 「
+        .search-keyword
+          = params[:q][:name_or_anime_title_or_place_or_description_cont]
+        .bracket 」
+        .head__text
+          に一致する投稿はありません。
+      .new-posts 新規投稿
+      .main
+        .posts-container
+          = render partial: 'posts/post-list', collection: @posts, as: "post"
 
   = render "shared/footer"

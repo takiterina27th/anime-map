@@ -7,8 +7,6 @@
   flex-direction: column;
   .head {
     margin: 0px 0 0px;
-    margin: 0 auto;
-    width: 90%;
     display: flex;
     .bracket {
       color: #fff;
@@ -31,7 +29,6 @@
   }
   .new-posts {
     margin: 20px auto 10px;
-    width: 90%;
     color: #fff;
     font-size: 30px;
   }
@@ -39,11 +36,16 @@
     .posts-container {
       border-top: 1px solid #eeeeee;
       padding-top: 25px;
-      width: 90%;
       margin: 10px auto 20px;
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px 20px;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px 20px; 
+      @media screen and (min-width: 400px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media screen and (min-width: 768px) {
+        grid-template-columns: repeat(4, 1fr);
+      } 
       .show-link {
         text-decoration: none;
         .thumbnail {
