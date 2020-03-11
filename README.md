@@ -1,83 +1,35 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-# DB設計
-
-## usersテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|nickname|string|null: false|
-|avatar|string||
-|email|string|null: false|
-|password|string|null: false|
-
-### アソシエーション
-
-- has_many :posts
-- has_many :comments
-- has_many :favorites
+<h2 align="center">Anime Map</h2>
 
 
-## postsテーブル
 
-|Column|Type|Options|
-|------|----|-------|
-|name|string|null: false|
-|image|string|null: false|
-|anime_title|string|null: false|
-|place|string|null: false|
-|description|string|null: false|
-|user_id|references|foreign_key: true|
+## :earth_asia: App URL
+http://54.95.185.15/
 
-### Association
-- belongs_to :user
-- has_many :comments
-- has_many :favorites
+## :cat: テスト用アカウント
+- メールアドレス: test-samurai@test.com
+- パスワード: 222222
+
+## :palm_tree: アプリの説明
+ユーザーが好きなアニメの聖地を登録できる投稿サイトです。
+
+## :cactus: 機能一覧
+- ユーザー登録機能
+- 投稿機能
+- 検索機能
+- お気に入り機能
+- googleマップ表示機能
+- コメント機能
+
+## :cyclone: 開発環境
+- Ruby
+- Ruby on Rails
+- MySQL
+- Github
+- AWS
+- Visual Studio Code
+
+<!-- ## :whale2: ライセンス -->
 
 
-## commentsテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|description|string|null: false|
-|user_id|references|foreign_key: true|
-|post_id|references|foreign_key: true|
-
-### Association
-- belongs_to :user
-- belongs_to :post
-
-
-## favoritesテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|user_id|references|foreign_key: true|
-|post_id|references|foreign_key: true|
-
-### Association
-- belongs_to :user
-- belongs_to :post
+## :innocent: 作者
+- https://github.com/takiterina27th/anime-map
