@@ -28,8 +28,5 @@ http://54.95.185.15/
 - AWS
 - Visual Studio Code
 
-<!-- ## :whale2: ライセンス -->
-
-
 ## :innocent: 作者
 - https://github.com/takiterina27th/anime-map
