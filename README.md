@@ -29,7 +29,7 @@ http://54.95.185.15/
 - Visual Studio Code
 
 ## :cloud: License
-MIT
+[MIT](https://github.com/takiterina27th/anime-map/blob/add-license-1/LICENSE)
 
 ## :innocent: 作者
 - https://github.com/takiterina27th/anime-map
