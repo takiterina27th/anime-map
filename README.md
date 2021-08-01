@@ -22,7 +22,7 @@ http://54.95.185.15/
 - Ruby on Rails 5.2.3
 - MySQL 5.6.51
 - Github
-- AWS(EC2,S3)
+- AWS(EC2,Elastic IP,S3)
 - jQuery
 - bootstrap
 - Visual Studio Code
